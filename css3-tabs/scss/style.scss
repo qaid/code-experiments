@@ -1,3 +1,8 @@
+// Variable Definitions
+
+$sidebar-blue: #e1e8ee;
+
+
 body {
 	padding: 0px;
 	margin: 0px;
@@ -5,10 +10,6 @@ body {
 	background-color: white;
 }
 
-@font-face {
-	font-family: icons;
-	src: url('../fonts/icons.ttf');
-}
 
 *::-moz-selection {
 	background: none repeat scroll 0 0 #F26D5E;
@@ -36,7 +37,7 @@ li div p {
 }
 
 a {
-	color: #888888;
+	color: darken($sidebar-blue, 20%);
 	text-decoration: none;
 	outline: none;
 }
@@ -57,17 +58,17 @@ li div {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	filter: alpha(opacity=0);
 	opacity: 0;
-	padding: 0 15px;
+	padding: 0 .8em;
 	position: absolute;
 	visibility: hidden;
 	width: 648px;
 	left: 0;
 
-	background: -webkit-gradient(linear, left top, left bottom, from(#E3E3E3), to(#FFFFFF));
-	background: -moz-linear-gradient(center top , #E3E3E3, #FFFFFF 85px) repeat scroll 0 0 transparent;
-	background: -o-linear-gradient(center top , #E3E3E3, #FFFFFF 85px) repeat scroll 0 0 transparent;
-	background: -ms-linear-gradient(center top , #E3E3E3, #FFFFFF 85px) repeat scroll 0 0 transparent;
-	background: linear-gradient(center top , #E3E3E3, #FFFFFF 85px) repeat scroll 0 0 transparent;
+	background: -webkit-gradient(linear, left top, left bottom, from($sidebar-blue), to(#FFFFFF));
+	background: -moz-linear-gradient(center top , $sidebar-blue, #FFFFFF 85px) repeat scroll 0 0 transparent;
+	background: -o-linear-gradient(center top , $sidebar-blue, #FFFFFF 85px) repeat scroll 0 0 transparent;
+	background: -ms-linear-gradient(center top , $sidebar-blue, #FFFFFF 85px) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top , $sidebar-blue, #FFFFFF 85px) repeat scroll 0 0 transparent;
 }
 
 #tabs {
@@ -90,14 +91,14 @@ ul {
 }
 
 #tabs li a {
-	background: -webkit-gradient(linear, left top, left bottom, from(#E3E3E3), to(#FFFFFF));
-	background: -moz-linear-gradient(center top , #E3E3E3, #FFFFFF 18px) repeat scroll 0 0 transparent;
-	background: -o-linear-gradient(center top , #E3E3E3, #FFFFFF 18px) repeat scroll 0 0 transparent;
-	background: -ms-linear-gradient(center top , #E3E3E3, #FFFFFF 18px) repeat scroll 0 0 transparent;
-	background: linear-gradient(center top , #E3E3E3, #FFFFFF 18px) repeat scroll 0 0 transparent;
+	background: -webkit-gradient(linear, left top, left bottom, from($sidebar-blue), to(#FFFFFF));
+	background: -moz-linear-gradient(center top , $sidebar-blue, #FFFFFF 18px) repeat scroll 0 0 transparent;
+	background: -o-linear-gradient(center top , $sidebar-blue, #FFFFFF 18px) repeat scroll 0 0 transparent;
+	background: -ms-linear-gradient(center top , $sidebar-blue, #FFFFFF 18px) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top , $sidebar-blue, #FFFFFF 18px) repeat scroll 0 0 transparent;
 	border: 1px solid #888888;
 	margin: 0 3px 0 0;
-	padding: 5px 25px;
+	padding: 5px 1em;
 	position: relative;
 	z-index: 1;
 	font-size: 14px;
@@ -110,11 +111,11 @@ ul {
 }
 
 #tabs li a:hover {
-	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#E3E3E3));
-	background: -moz-linear-gradient(center top , #FFFFFF 12px, #E3E3E3 25px) repeat scroll 0 0 transparent;
-	background: -o-linear-gradient(center top , #FFFFFF 12px, #E3E3E3 25px) repeat scroll 0 0 transparent;
-	background: -ms-linear-gradient(center top , #FFFFFF 12px, #E3E3E3 25px) repeat scroll 0 0 transparent;
-	background: linear-gradient(center top , #FFFFFF 12px, #E3E3E3 25px) repeat scroll 0 0 transparent;
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to($sidebar-blue));
+	background: -moz-linear-gradient(center top , #FFFFFF 12px, $sidebar-blue 25px) repeat scroll 0 0 transparent;
+	background: -o-linear-gradient(center top , #FFFFFF 12px, $sidebar-blue 25px) repeat scroll 0 0 transparent;
+	background: -ms-linear-gradient(center top , #FFFFFF 12px, $sidebar-blue 25px) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top , #FFFFFF 12px, $sidebar-blue 25px) repeat scroll 0 0 transparent;
 }
 
 #tabs-content div p {
@@ -167,18 +168,45 @@ ul {
 	}
 
 
-#tabs ul li#Four div.tab-inner-content ul {margin-bottom: 1.5em;}
+#tabs ul li#Four div.tab-inner-content p {
+	line-height: 1.75em;
+	margin-bottom: 0;
+	}
+
+
+#tabs ul li#Four div.tab-inner-content p:last-child {margin-bottom: 2em;}
+
+#tabs ul li#Four div.tab-inner-content ul {margin-bottom: 0.3em;}
+#tabs ul li#Four div.tab-inner-content ul li {
+	list-style: disc;
+	list-style-position: inside;
+	text-indent: 1em;
+	line-height: 1.8em;
+	}
+	
+#tabs ul li#Four div.tab-inner-content h3 {
+	margin-bottom: -.3em;
+	display: block;
+	padding-bottom: 0.2em;
+	border-bottom: 1px solid darken($sidebar-blue, 40%);
+	}
+	
+#tabs ul li#Four div.tab-inner-content span {
+	text-decoration: underline; 
+	font-weight: bold;
+	}
 
 #One:target a,#Two:target a,#Three:target a,#Four:target a {
 	color: #0e556c;
 	border-bottom: none;
 	top: 1px;
+	font-weight: bold;
 
-	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#E3E3E3));
-	background: -moz-linear-gradient(center top , #FFFFFF 12px, #E3E3E3 25px) repeat scroll 0 0 transparent;
-	background: -o-linear-gradient(center top , #FFFFFF 12px, #E3E3E3 25px) repeat scroll 0 0 transparent;
-	background: -ms-linear-gradient(center top , #FFFFFF 12px, #E3E3E3 25px) repeat scroll 0 0 transparent;
-	background: linear-gradient(center top , #FFFFFF 12px, #E3E3E3 25px) repeat scroll 0 0 transparent;
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to($sidebar-blue));
+	background: -moz-linear-gradient(center top , #FFFFFF 12px, $sidebar-blue 25px) repeat scroll 0 0 transparent;
+	background: -o-linear-gradient(center top , #FFFFFF 12px, $sidebar-blue 25px) repeat scroll 0 0 transparent;
+	background: -ms-linear-gradient(center top , #FFFFFF 12px, $sidebar-blue 25px) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top , #FFFFFF 12px, $sidebar-blue 25px) repeat scroll 0 0 transparent;
 	padding-top: 6px;
 }
 
@@ -214,4 +242,5 @@ i:hover {
 	color: #FFFFFF;
 }
 
+#form13 header#header.info {margin-top:1em !important;}
 
