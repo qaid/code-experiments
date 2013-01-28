@@ -1,0 +1,21 @@
+.download-box {
+  background-color: #9b0f00;
+  border: 2px solid #731900;
+  padding: 20px;
+  margin: 0 auto; }
+
+.download-box a {
+  color: white !important;
+  text-decoration: none; }
+
+.download-box a:hover {
+  text-decoration: underline;
+  color: lightgray; }
+
+.download-box img {
+  float: left;
+  position: relative;
+  top: -5px;
+  left: 0;
+  margin: 0 10px 0 0;
+  padding: 0; }

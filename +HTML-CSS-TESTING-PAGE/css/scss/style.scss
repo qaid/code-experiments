@@ -1,0 +1,27 @@
+
+.download-box{
+	background-color: lighten(#680a00,10);
+	border: 2px solid lighten(#400e00,10);
+	padding: 20px;
+	margin:0 auto;
+}
+
+.download-box a {
+	color: white !important;
+	text-decoration:none;
+}
+
+
+.download-box a:hover {
+	text-decoration:underline;
+	color: lightgray;
+}
+
+.download-box img {
+	float: left;
+	position:relative;
+	top:-5px;
+	left:0;
+	margin:0 10px 0 0;
+	padding:0;
+}
